@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+body {
+  background: #e5e5e5;
+  /* max-width: 1200px;
+  margin: 0 auto; */
+}
+
+/* header */
+header {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.nav-header {
+  background: #fff;
+  height: 120px;
+  padding-top: 20px;
+}
+
+.nav-header nav ul {
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  align-self: center;
+  margin-top: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: "Lora";
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 20px;
+  color: #534533;
+}
+
+.logo {
+  font-family: "Alex Brush", cursive;
+  font-size: 50px;
+  line-height: 63px;
+  color: #314455;
+}
+
+.nav-left li,
+.nav-right li {
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+.nav-center,
+.footer-center{
+  background: url("./../images/logo-bcg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* banner */
+.banner {
+  height: 100vh;
+  background-image: url("./../images/banner-bcg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(#edeae8 31.77%, #b16f44 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-baby {
+  width: 560px;
+  text-align: center;
+  align-self: center;
+}
+
+.banner-baby img {
+  height: 500px;
+}
+
+.banner-text {
+  width: 650px;
+  margin: 0 auto;
+  text-align: left;
+  /* border: 1px solid red; */
+}
+
+.welcome-text {
+  font-size: 24px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #1c242c;
+}
+
+.banner-text h4 {
+  font-size: 54px;
+  line-height: 78px;
+  text-transform: capitalize;
+  font-family: "Sorts Mill Goudy", serif;
+  color: #161b20;
+}
+
+.welcome-para {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "pen-sans""Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  width: 450px;
+}
+
+.contact-btn {
+  width: 160px;
+  height: 60px;
+  background: #534533;
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Lora"sans-serif;
+  margin-top: 30px;
+}
+
+/* stories */
+.stories {
+  margin-top: 30px;
+}
+
+.story-wrapper {
+  /* margin-left: 60px; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.stories h1,
+.about h1,
+.services h1 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 48px;
+  color: #161b20;
+  font-family: "Sorts Mill Goudy", serif;
+  line-height: 72px;
+}
+
+.story-wrapper {
+  background-image: url("./../images/story-flower-right.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(#edeae8 31.77%, #b16f44 100%);
+}
+
+.top-1-text,
+.top-2-text,
+.top-right-text {
+  height: 110.58px;
+  width: 250px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.story-wrapper * img {
+  width: 300px;
+  height: 400px;
+}
+
+.top-1-text {
+  position: relative;
+  top: 110px;
+  left: 250px;
+}
+
+.story-top-2 {
+  padding-top: 100px;
+}
+
+.top-2-text {
+  position: relative;
+  bottom: 112px;
+  left: 250px;
+}
+
+.top-right-text {
+  position: relative;
+  top: 110px;
+  left: 250px;
+}
+
+.story-right {
+  margin-right: 50px;
+  padding-top: 250px;
+}
+
+.top-1-text-left,
+.top-2-text-left,
+.top-right-text-right,
+.top-right-text-white,
+.top-1-text-white {
+  text-align: center;
+}
+
+.top-1-text-left,
+.top-2-text-left {
+  border-right: 2px solid grey;
+  padding-right: 20px;
+}
+
+/* about us */
+.about {
+  margin-top: 0px;
+  height: 523px;
+  text-align: center;
+  background: #fff;
+  padding-top: 10px
+}
+
+.about p {
+  max-width: 760px;
+  line-height: 24px;
+  margin: 0 auto;
+}
+
+.about button {
+  width: 257px;
+  height: 60px;
+  background: #534533;
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Lora"sans-serif;
+  margin-top: 30px;
+}
+
+.about-wrapper {
+  height: 450px;
+  border: 1px solid rgba(22, 27, 32, 0.5);
+  border-radius: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding-top: 80px
+}
+
+/* services */
+
+.service-img-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px
+}
+
+.service p {
+  color: #534533;
+  font-size: 24px;
+  text-align: center;
+  line-height: 24px;
+  padding-top: 30px;
+}
+
+/* footer */
+footer {
+  height: 250px;
+  background-color: #fff;
+  margin-top: 40px;
+  padding-top: 10px
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1300px;
+  border: 1px solid rgba(22, 27, 32, 0.5);
+  border-radius: 40px;
+  margin: 0 auto;
+  height: 180px;
+  margin: 30px;
+}
+
+.footer-center .logo {
+  text-transform: capitalize;
+}
+
+.footer p {
+  font-size: 16px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.footer span {
+  font-size: 14px;
+  width: 185px;
+  color: #534533;
+}
+
+.footer span a {
+  text-decoration: none;
+  color: #534533
+}
+
+.logo {
+  text-decoration: none
+}
+
+.nav-center li {
+  list-style-type: none;
+}
+
+.p1 {
+  padding-bottom: 30px;
+}
