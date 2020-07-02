@@ -432,3 +432,37 @@ footer {
         margin-top: 15px;
     }
 }
+
+@media screen and (min-width:776px) and (max-width:1100px){
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .story-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-1-text {
+        position: relative;
+        top: 84px;
+        left: 250px;
+    }
+
+
+    .top-2-text {
+        position: relative;
+        bottom: 88px;
+        left: 250px;
+    }
+
+    .top-right-text {
+        position: relative;
+        top: 220px;
+        left: 250px;
+    }
+    .story-right {
+        margin: auto;
+        /* padding-top: 20px; */
+    }
+}
