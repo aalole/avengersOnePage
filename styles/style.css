@@ -393,7 +393,13 @@ nav ul li a:hover {
     text-decoration: none
 }
 .nav-center{
-    display: none;
+    /* display: none; */
+}
+.footer-nav-center{
+    background: url("./../images/logo-bcg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* footer pc */
