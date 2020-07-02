@@ -1,8 +1,10 @@
-const toggleBtn = document.querySelector('#togle-btn');
-const nav = document.querySelector('.nav-header nav');
-console.log(nav);
-const showMenu = () => {
-    console.log('click is working');
-    nav.classList.toggle('show')
+function displayNav() {
+  var link = document.getElementById("myLinks");
+  let dNone = document.getElementById("dnone");
+  if (link.style.display === "block") {
+    link.style.display = "none";
+  } else {
+    link.style.display = "block";
+    dNone.style.display = "none";
+  }
 }
-toggleBtn.addEventListener('click', showMenu);

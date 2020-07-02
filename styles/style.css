@@ -10,6 +10,8 @@
 
 body {
     background: #e5e5e5;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* header */
@@ -28,10 +30,12 @@ header {
     background-repeat: no-repeat;
 }
 
+
 .nav-header {
     background: #fff;
-    height: 100px;
-    padding-top: 20px;
+    padding: 30px;
+    position: fixed;
+    width: 100%;
 }
 
 .togle-btn {
@@ -56,14 +60,14 @@ header {
     /* background: black */
 }
 
-.nav-header nav {
+.nav-header #myLinks {
     display: none
 }
 
 .nav-header nav ul {
     list-style-type: none;
+    /* flex: 1 0 auto; */
 }
-
 
 nav ul li a {
     text-decoration: none;
@@ -73,40 +77,45 @@ nav ul li a {
     line-height: 20px;
     color: #534533;
     display: block;
-    padding: 10px;
-    transition: color 1s ease, background 1s ease, padding 1s ease;
+    margin: 20px;
+    padding: 5px;
+    transition: color 1s ease, background 1s ease;
 }
 
 nav ul li a:hover {
     color: #fff;
     background: #534533;
-    padding: 5px
+    /* padding: 5px */
 }
 
 .logo {
     font-family: "Alex Brush", cursive;
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 32px;
+    /* line-height: 41px; */
     color: #314455;
 }
 
 .logoBtn {
     margin-left: 20px;
+    /* height: 60px; */
+    padding-top: 15px;
+    width: 180px;
+    padding-left: 20px;
 }
 
 .logoBtn li {
     list-style-type: none;
 }
 
-@media screen and (min-width:772px) {
+@media screen and (min-width:576px) {
 
     .togle-btn,
     .logoBtn {
         display: none;
     }
 
-    .nav-header nav {
-        display: flex;
+    .nav-header .myLinks {
+        display: flex !important;
         justify-content: space-evenly;
         align-items: center;
     }
@@ -115,18 +124,22 @@ nav ul li a:hover {
     .nav-right {
         display: flex;
     }
+
+    .nav-header {
+        position: static;
+    }
 }
 
 /* banner section  mobile*/
 .banner img,
 .stories img,
 .services img {
-    max-width: 300px;
+    max-width: 320px;
     margin: 0 auto;
 }
 
 .banner {
-
+    padding-top: 150px;
     background-image: url("./../images/banner-bcg.png");
     background-size: cover;
     background-position: center;
@@ -139,30 +152,31 @@ nav ul li a:hover {
 }
 
 .welcome-text {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
     color: #1c242c;
 }
 
 .banner-text h4 {
-    font-size: 24px;
+    font-size: 36px;
     line-height: 56px;
     text-transform: capitalize;
     font-family: "Sorts Mill Goudy", serif;
     color: #161b20;
+    font-weight: normal;
 }
 
 .welcome-para {
-    font-size: 16px;
-    line-height: 38px;
+    font-size: 12.03px;
+    line-height: 18px;
     font-family: "pen-sans""Franklin Gothic Medium", "Arial Narrow", Arial;
 
 }
 
 .contact-btn {
-    width: 160px;
-    height: 60px;
+    width: 106px;
+    height: 34px;
     background: #534533;
     color: #fff;
     border-radius: 10px;
@@ -170,12 +184,68 @@ nav ul li a:hover {
     margin-top: 30px;
 }
 
+.contact-btn:hover {
+    background: #fff;
+    color: #534533;
+}
+
 /* banner big screen */
-@media screen and (min-width:772px) {
+@media screen and (min-width:776px) {
     .banner {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        padding: 50px;
+    }
+
+    .banner-baby {
+        /* width: 560px; */
+        text-align: center;
+        align-self: center;
+    }
+
+    /* .banner-baby img {
+        height: 500px;
+      } */
+
+    .banner-text {
+        /* width: 650px;
+        margin: 0 auto; */
+        text-align: left;
+        /* border: 1px solid red; */
+    }
+
+    .welcome-text {
+        font-size: 24px;
+        line-height: 35px;
+        text-transform: uppercase;
+        color: #1c242c;
+    }
+
+    .banner-text h4 {
+        font-size: 54px;
+        line-height: 78px;
+        text-transform: capitalize;
+        font-family: "Sorts Mill Goudy", serif;
+        color: #161b20;
+    }
+
+    .welcome-para {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: "pen-sans""Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+        width: 450px;
+    }
+
+    .contact-btn {
+        width: 160px;
+        height: 60px;
+        background: #534533;
+        color: #fff;
+        border-radius: 10px;
+        font-family: "Lora"sans-serif;
+        margin-top: 30px;
     }
 }
 
@@ -189,10 +259,10 @@ nav ul li a:hover {
 .services h1 {
     margin-top: 10px;
     text-align: center;
-    font-size: 48px;
+    font-size: 24px;
     color: #161b20;
     font-family: "Sorts Mill Goudy", serif;
-    line-height: 72px;
+    line-height: 43px;
 }
 
 .story-wrapper {
@@ -241,6 +311,20 @@ nav ul li a:hover {
     padding-left: 20px
 }
 
+.top-1-text-left,
+.top-2-text-left,
+.top-right-text-right,
+.top-right-text-white,
+.top-1-text-white {
+    text-align: center;
+}
+
+.top-1-text-left,
+.top-2-text-left {
+    border-right: 2px solid grey;
+    padding-right: 20px;
+}
+
 /* stories pc and tablet */
 @media screen and (min-width:772px) {
     .story-wrapper {
@@ -271,7 +355,7 @@ nav ul li a:hover {
     }
 
     .story-right {
-        margin-right: 50px;
+        padding-right: 50px;
         padding-top: 250px;
     }
 }
@@ -286,18 +370,30 @@ nav ul li a:hover {
 }
 
 .about p {
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 18px;
     padding: 20px;
+    text-rendering: optimizeLegibility;
+    text-align: justify;
+    text-orientation: initial;
+    text-justify: auto;
 }
 
 .about button {
-    width: 257px;
-    height: 60px;
+    width: 177px;
+    height: 48px;
     background: #534533;
     color: #fff;
     border-radius: 10px;
     font-family: "Lora"sans-serif;
     margin: 30px;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.about button:hover {
+    background: #fff;
+    color: #534533;
 }
 
 .about-wrapper {
@@ -312,32 +408,71 @@ nav ul li a:hover {
     .about {
         margin-top: 0px;
         height: 523px;
+        text-align: center;
+        background: #fff;
+        padding-top: 10px
+    }
+
+    .about h1,
+    .service h1,
+    .stories h1 {
+        font-size: 40px;
+        line-height: 72px
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .about button {
+        width: 257px;
+        height: 60px;
     }
 
     .about-wrapper {
+        width: 1100px;
+        max-width: 100%;
+        margin: 20px auto;
 
-        max-width: 1100px;
-        margin: 40px auto;
     }
 }
 
 /* our services */
 .service p {
     color: #534533;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
-    line-height: 24px;
+    line-height: 27px;
     padding-top: 20px;
 }
-
+/* 
 .service {
-    max-width: 300px;
-    margin: 40px auto;
+    max-width: 320px;
+    margin: 0 auto;
+} */
+.services h1{
+    font-size: 24px;
+    line-height: 36px;
+}
+.service{
+    max-width: 320px;
+    margin: 0 auto;
+}
+.services img{
+    width: 90%;
+    height: 281px;
+    margin-left: auto;
+    margin-right: auto;
+    display:block
+   
+}
+.service p{
+    font-size: 18px;
+    line-height: 27px;
+    padding-bottom: 30px;
 }
 
-.services h1 {
-    font-size: 38px;
-}
 
 /* service pc */
 @media screen and (min-width:772px) {
@@ -347,12 +482,11 @@ nav ul li a:hover {
         align-items: center;
         /* margin-top: 30px */
     }
-
-    .stories h1,
-    .about h1,
-    .services h1 {
-        padding-top: 20px;
+    .services h1{
+        font-size: 48px;
+        line-height: 72px;
     }
+    
 }
 
 /* footer mobile */
@@ -363,19 +497,19 @@ footer {
     padding-top: 10px;
     border: 1px solid rgba(22, 27, 32, 0.5);
     border-radius: 40px;
-  }
+}
 
-  .footer {
+.footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     max-width: 1300px;
-    
     margin: 0 auto;
     height: 180px;
     padding: 0 20px;
-  }
-.footer-nav-center{
+}
+
+.footer-nav-center {
     max-width: 160px;
     margin: 0 auto;
     text-align: center;
@@ -383,47 +517,59 @@ footer {
     padding-bottom: 20px;
     padding-top: 20px;
 }
-.footer-nav-center a{
+
+.footer-nav-center a {
     text-decoration: none;
-    padding-top:30px
+    padding-top: 30px
 }
-.footer-center .logo{
+
+.footer-center .logo {
     text-transform: capitalize;
 }
-.footer p{
-    font-size: 16px;
+
+.footer p {
+    font-size: 14px;
     color: #000;
     text-transform: capitalize;
     padding: 20px 0;
+    line-height: 21px   
 }
-.footer span{
+
+.footer span {
     font-size: 14px;
     color: #534533;
 }
-.footer a{
+.foot-left-bottom span a{
+    font-size: 12px;
+    line-height: 18px
+}
+.footer a {
     text-decoration: none;
     color: #534533
 }
-.logo{
+
+.logo {
     text-decoration: none
 }
 
-.footer-nav-center{
+.footer-nav-center {
     background: url("./../images/logo-bcg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.hide{
+
+.hide {
     display: none
 }
 
 /* footer pc */
 @media screen and (min-width:772px) {
-    .footer-nav-center{
+    .footer-nav-center {
         display: none;
     }
-    .hide{
+
+    .hide {
         display: inline-block;
         height: 60px;
         width: 200px;
@@ -431,9 +577,23 @@ footer {
         padding-left: 10px;
         margin-top: 15px;
     }
+    .footer p {
+        font-size: 18px;
+        line-height: 36px   
+    }
+    
+    .footer span {
+        font-size: 14px;
+        color: #534533;
+    }
+    .foot-left-bottom span a{
+        font-size: 14px;
+        line-height: 21px
+    }
+    
 }
 
-@media screen and (min-width:776px) and (max-width:1100px){
+/* @media screen and (min-width:776px) and (max-width:1100px){
     body{
         overflow-x: hidden;
         width: 100%;
@@ -463,6 +623,6 @@ footer {
     }
     .story-right {
         margin: auto;
-        /* padding-top: 20px; */
+        padding-top: 0!important;
     }
-}
+} */
